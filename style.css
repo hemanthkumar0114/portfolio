@@ -16,9 +16,6 @@
     --main-color: #a855f7;
 }
 
-
-
-
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -330,7 +327,27 @@ span{
 }
 
 .about-content h3 {
-    font-size: 5.6rem;
+    font-size: 2.6rem;
+}
+#typing {
+    font-size: 5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--second-color);
+    width: 0;
+    animation: typing 4s steps(30,end) forwards,
+               blink 0.7s infinite;
+  
+}
+  @keyframes typing 
+  {
+    from { width: 0; }
+    to { width: 18ch; }
+  }
+
+  @keyframes blink 
+  {
+    50% { border-color: transparent; }
 }
 
 .about-content p {
@@ -676,7 +693,7 @@ span{
     .hero-right {
         margin-left: 0;
         margin-top: 5rem;
-    }
+    
 }
 
 /* ---------- Mobile Menu (max-width: 768px) ---------- */
@@ -685,6 +702,9 @@ span{
     #menu-icon {
         display: block;
         transition: transform 0.3s ease;
+    }
+    .home{
+        padding-top: 50px;
     }
 
     #menu-icon.bx-x {
@@ -782,3 +802,4 @@ span{
         text-align: center;
     }
 }
+
